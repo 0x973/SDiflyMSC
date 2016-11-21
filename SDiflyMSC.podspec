@@ -5,7 +5,6 @@
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
 #  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
 #
- 
 Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -46,7 +45,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -98,7 +97,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = 'SD_iflyMSC/iflyMSC.framework/Headers/*.h'
+  s.source_files  = 'Headers','SD_iflyMSC/iflyMSC.framework/Headers/*.h'
   s.vendored_frameworks = 'SD_iflyMSC/iflyMSC.framework'
   #s.exclude_files = "Classes/Exclude"
 
@@ -131,7 +130,7 @@ Pod::Spec.new do |s|
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
  s.frameworks = 'CoreLocation','CoreTelephony','AVFoundation','AddressBook','AudioToolbox','SystemConfiguration','QuartzCore','CoreGraphics'
- s.libraries = 'z','libz','libc++'
+ s.libraries = 'z','c++'
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
